@@ -1,7 +1,19 @@
 def convert_km (miles):
     km = miles * 1.60934
     return km
-zahl=float(input("Gib die Milen-Anzahl an, die du in KM umrechnen willst? :"))
-distance = convert_km (zahl)
 
-print("Ca.", float(distance), "KM.")
+def convert_miles (km):
+    miles = km / 1.60934
+    return miles
+
+choice= input("Wenn du Meilen in Kilometer umrechnen willst, dann gib: "+"c1 "+"ein.\nFür das Umrechnen von Kilometern in Meilen, gib: " + "c2" + " ein!")
+if choice=="c1":
+   miles=float(input("gib die Anzahl an Meilen ein, die du in Kilometer umrechnen willst: "))
+   distance_km=convert_km(miles)
+   print("Ca.", float(distance_km), "KM.") 
+elif choice=="c2":
+    km=float(input("Gib die Anzahl an Kilometern ein, die du in Meilen umrechnen willst: "))
+    distance_miles=convert_miles(km)
+    print("Ca.", float(distance_miles), "Meilen.")
+else:
+    print("Ungültige Eingabe! geben c1 oder c2 ein!")
