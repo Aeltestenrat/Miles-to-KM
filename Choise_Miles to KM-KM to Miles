@@ -6,13 +6,13 @@ def convert_miles (km):
     miles = km / 1.60934
     return miles
 while True:
-    choice= input("Wenn du Meilen in Kilometer umrechnen willst, dann gib: "+"1 "+"ein.\nFür das Umrechnen von Kilometern in Meilen, gib: " + "2" + " ein!")
+    choice= input("\nWenn du Meilen in Kilometer umrechnen willst, dann gib: "+"1 "+"ein.\nFür das Umrechnen von Kilometern in Meilen, gib: " + "2" + " ein!    \n")
     if choice=="1":
-        miles=float(input("gib die Anzahl an Meilen ein, die du in Kilometer umrechnen willst: "))
+        miles=float(input("gib die Anzahl an Meilen ein, die du in Kilometer umrechnen willst:    \n"))
         distance_km=convert_km(miles)
         print("Ca.", float(distance_km), "KM.") 
     elif choice=="2":
-        km=float(input("Gib die Anzahl an Kilometern ein, die du in Meilen umrechnen willst: "))
+        km=float(input("Gib die Anzahl an Kilometern ein, die du in Meilen umrechnen willst:    \n"))
         distance_miles=convert_miles(km)
         print("Ca.", float(distance_miles), "Meilen.")
     else:
